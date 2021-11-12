@@ -1,0 +1,118 @@
+﻿<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PdfDownload</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PdfDownload</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - PdfDownload - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>-->
+@model PdfDownload.Models.CertificateForm
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS, C#, iText 7, ASP.NET Core" />
+    <meta name="description" content="Automatic Certificate Generator " />
+    <meta name="author" content="PhilsKay"/>
+    <meta http-equiv="refresh" content="30"/>
+
+    <title>Automatic Certificate Generator</title>
+    <link rel="stylesheet" href="~/css/StyleSheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        header {
+            background-image: url(../../image/pexels-sebastiaan-stam-1482476.jpg);
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            background-repeat: no-repeat
+        }
+
+        .footer {
+            margin-left: 10px
+        }
+    </style>
+</head>
+<body>
+
+    <div clss="bac">
+        <header>
+            <div class="heading_text">
+                <h1>Create <small>Certificates</small> for Free in one click</h1>
+                <h2>Make unique certificates in one click. No design skills needed.</h2>
+            </div>
+        </header>
+        <main>
+            <div>
+                <form asp-action="DownLoad">
+                    <input type="text" name="Name" class="question" id="name" asp-for="Name" required autocomplete="off" />
+                    <label asp-for="Name"><span>What's your name?</span></label>
+                    <input type="submit" id="submitBtn" value="Get Certificate" />
+                </form>
+            </div>
+        </main>
+
+    </div>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted bg-light">
+        <div class="container">
+            &copy; 2021 - <strong>PhilsKay</strong>
+        </div>
+    </footer>
+</body>
+</html>
+
+@section scripts{<partial name="_ValidationScriptPartial" />
+}
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)

@@ -1,0 +1,56 @@
+﻿.logo-img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-left: 40px;
+    padding-bottom: 5px;
+    padding-top: 3px;
+}
+
+.head {
+    font-size: 1.9rem;
+    color: white;
+    margin: 0 auto;
+    /* margin-left:150px; */
+    /* position:fixed; */
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar {
+    margin: 0 auto;
+    background-color: #a683e3;
+    width: 50%;
+    height: 90px;
+    box-shadow: 5px 5px 15px -5px rgba(0,0,0,0.8);
+}
+
+
+@media (max-width: 1110px) {
+    .head {
+        font-size: 1.5rem;
+    }
+
+    .logo-img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .navbar {
+        padding-bottom: 5px;
+    }
+}
+
+@media (max-width: 955px) {
+    .head {
+        font-size: 1.2rem;
+    }
+
+    .logo-img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .navbar {
+        padding-bottom: 5px;
+    }
+}
